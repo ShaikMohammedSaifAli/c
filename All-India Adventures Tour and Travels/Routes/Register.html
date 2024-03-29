@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOK NOW</title>
+    <link rel="icon" href="/Files/Routes/Logos/Logo Tab.png">
+    <link rel="stylesheet" type="text/css" href="CSS/styl.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" type="text/css" href="/Styles/Routes/Register.css">
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: black;
+        color: #fff;
+        font-size: large;
+    }
+
+    @keyframes glows {
+        from {
+            text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red;
+        }
+
+        to {
+            text-shadow: 0 0 20px blue, 0 0 30px #00f, 0 0 40px #00f;
+        }
+    }
+
+    .navbar-toggler {
+        background-color: #fff;
+    }
+
+    @media (max-width: 768px) {
+        .submitbtn {
+            padding: 6px 12px;
+            font-size: 14px;
+        }
+    }
+</style>
+
+<body class="register-body">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: black; padding: 20px; ">
+        <a href="/Routes/HomePage.html"><img src="/Files/Routes/Logos/Logo.png" class="logo" alt="Logo" title="FirstFlight Travels"></a>
+        <div class="order-lg-2 order-md-3">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse order-lg-3 order-md-2" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/Routes/HomePage.html" style="color: #fff;">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Routes/Destinations.html" style="color: #fff;">DESTINATIONS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Routes/ContactUs.html" style="color: #fff;">CONTACT US</a>
+                </li>
+                <li class="nav-item">
+                    <button class="round-button" style="background-color: transparent; border: none; padding: 0;">
+                        <a class="nav-link" href="/Routes/Register.html" style="color: #fff; animation: glows 1.5s infinite;">BOOK NOW</a>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <br>
+    <section class="registration">
+        <div class="register-form">
+            <h1 style="font-size: 80PX;">BOOK <span class="btn" style="font-size: 80px; color: #ff0000;">NOW</span></h1>
+            <form id="registrationForm" method="post" action="https://script.google.com/macros/s/AKfycbx6feVoQvF0_2DFhpTUKGR42wv5YcP5QE5YMwl5Li0drK_MI_vKfeyt9wbtTrwKG7Kv/exec">
+                <h4>Booking ID</h4>
+                <div class="booking-id">
+                    <input type="text" id="bookingId" name="bookingId" readonly>
+                    <button type="button" id="generateBookingId" class="generate-btn" style="background-color: red;">Generate</button>
+                </div>
+                <h4>Enter Your Full Name</h4><br>
+                <input type="text" name="myname1" placeholder="Name" id="name" required required size="60">
+                <h4>Enter Your Email</h4><br>
+                <input type="email" name="myemail" placeholder="Email-Id" id="email" required required size="40">
+                <!--<h4>Enter Your Phone No</h4><br>
+                <input type="tel" name="myphone" placeholder="Phone No." id="phonenum" required required size="20">-->
+                <h4>Enter The Date Of Your Trip</h4><br>
+                <input type="date" name="myage" placeholder="DD-MM-YYYY" id="age" required size="8" maxlength="8">
+
+                <br>
+                <h4>No Of Guests in The Trip</h4><br>
+                <input type="radio" name="mygender" id="male" value="1" required style="transform: scale(1.5); color: blue; font-size: 15px;"> 1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                <input type="radio" name="mygender" id="males" value="2" required style="color: green; transform: scale(1.5);"> 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                <input type="radio" name="mygender" id="males" value="3" required style="color: red; transform: scale(1.5);"> 3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                <input type="radio" name="mygender" id="female" value="4" style="color: purple; transform: scale(1.5);"> 4
+                <h4>Travel Destination</h4><br>
+                <input type="radio" name="destination" id="kashmir" value="Goa" style="color: #ff0000; transform: scale(1.5);" required> Goa &nbsp; &nbsp; &nbsp;
+                <input type="radio" name="destination" id="istanbul" value="Istanbul" style="color: #00ff00; transform: scale(1.5);"> Munnar &nbsp; &nbsp; &nbsp;
+                <input type="radio" name="destination" id="paris" value="Paris" style="color: #0000ff; transform: scale(1.5);"> Jaipur &nbsp; &nbsp; <br><br>
+                <input type="radio" name="destination" id="bali" value="Bali" style="color: #ffa500; transform: scale(1.5);"> Manali &nbsp; &nbsp; &nbsp;
+                <input type="radio" name="destination" id="balii" value="Balii" style="color: #ffa500; transform: scale(1.5);"> Agra &nbsp; &nbsp; &nbsp;
+                <input type="radio" name="destination" id="kashmirr" value="Delhi" style="color: #ffa500; transform: scale(1.5);"> Delhi &nbsp; &nbsp; &nbsp;
+                <input type="radio" name="destination" id="dubai" value="Dubai" style="color: #800080; transform: scale(1.5);"> Hyderabad
+                <h4>Package</h4><br>
+                <input type="radio" name="locations" id="loc2" value="Silver" style="color: #ff0000; transform: scale(1.5);"> Silver &nbsp; &nbsp; &nbsp;
+                <input type="radio" name="locations" id="loc3" value="Gold" style="color: #00ff00; transform: scale(1.5);"> Gold &nbsp; &nbsp; &nbsp;
+                <input type="radio" name="locations" id="loc4" value="Platinum" style="color: #0000ff; transform: scale(1.5);"> Platinum &nbsp; &nbsp; &nbsp;
+                <br> <br>
+
+                <input type="checkbox" name="t&c" id="tnc" checked required> I accept the Terms & Conditions.
+                <br> <br><br>
+                <input type="submit" value="Submit" class="submitbtn" style="background-color: red; color: #fff; animation: pulse 2.5s infinite;">
+            </form>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="foot">
+            <div class="footer-content">
+
+                <div class="footlinks">
+                    <h4 style="color: #097969;">Quick Links</h4>
+                    <ul>
+                        <li style="color: #800080;"><a href="/Routes/Register.html">Register</a></li>
+                        <li style="color: #000000;"><a href="/Routes/BookingDetails.html">Track Your Booking</a></li>
+                        <li style="color: #000000;"><a href="/Routes/Register.html">Book Now</a></li>
+                        <li><a href="/contact">Contact Form</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="footlinks">
+                    <h4 style="color: #097969;">Contact Us</h4>
+                    <p>If you have any questions or inquiries, feel free to contact us:</p>
+                    <ul>
+                        <li style="color: #fff">Email: <span style="color: teal;">AIATAT@gmail.com</span></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="end">
+            <p>Copyright © 2024 ALL-INDIA ADVENTURES TOUR AND TRAVELS Travels All Rights Reserved.<br></p>
+        </div>
+    </section>
+    <script src="/Scripts/Routes/Register.js">
+
+    </script>
+    <script>
+        window.addEventListener('resize', function() {
+            var screenWidth = window.innerWidth;
+            var fontSize = screenWidth < 600 ? '16px' : '20px';
+            document.body.style.fontSize = fontSize;
+        });
+    </script>
+    <script src="responsive.js"></script>
+</body>
+
+</html>

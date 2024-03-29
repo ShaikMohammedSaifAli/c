@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRATION DETAILS</title>
+    <link rel="icon" href="/Files/Routes/Logos/Logo Tab.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" type="text/css" href="/Styles/Routes/Submission.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: black;
+            color: #333;
+        }
+
+        @keyframes glows {
+            from {
+                text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red;
+            }
+
+            to {
+                text-shadow: 0 0 20px blue, 0 0 30px #00f, 0 0 40px #00f;
+            }
+        }
+
+        .navbar-toggler {
+            background-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: black; padding: 20px; ">
+        <a href="/Routes/HomePage.html"><img src="/Files/Routes/Logos/Logo.png" class="logo" alt="Logo" title="FirstFlight Travels"></a>
+        <div class="order-lg-2 order-md-3">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse order-lg-3 order-md-2" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/Routes/HomePage.html" style="color: #fff;">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Routes/Destinations.html" style="color: #fff;">DESTINATIONS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Routes/ContactUs.html" style="color: #fff;">CONTACT US</a>
+                </li>
+                <li class="nav-item">
+                    <button class="round-button" style="background-color: transparent; border: none; padding: 0;">
+                        <a class="nav-link" href="/Routes/Register.html" style="color: #fff; animation: glows 1.5s infinite;">BOOK NOW</a>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav><br>
+
+    <!-- Registration Details Section -->
+    <section class="registration-details">
+        <div class="details-container" style="background-color: #333;">
+            <h1 style="color: #fff; text-align: center; animation: highlight 1s infinite; font-size: 50px;">Registration Details</h1>
+            <table>
+                <tr>
+                    <th style=" margin-left: cm;">Field</th>
+                    <th style="text-align: left;">Details</th>
+                </tr>
+                <tbody id="details" style="color: #fff; text-align: left;"></tbody>
+            </table>
+            <div class="btn-container" id="buttonContainer">
+                <button onclick="editDetails()" id="editButton">Edit Details</button>
+                <button onclick="submitDetails()">Submit Details</button>
+                <button onclick="downloadDetails()">Download Details</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+        <div class="foot">
+            <div class="footer-content">
+                <div class="footlinks">
+                    <h4 style="color: #097969;">Quick Links</h4>
+                    <ul>
+                        <li style="color: #800080;"><a href="/Routes/Register.html">Register</a></li>
+                        <li style="color: #000000;"><a href="/Routes/BookingDetails.html">Track Your Booking</a></li>
+                        <li style="color: #000000;"><a href="/Routes/Register.html">Book Now</a></li>
+                        <li><a href="/contact">Contact Form</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="footlinks">
+                    <h4 style="color: #097969;">Contact Us</h4>
+                    <p>If you have any questions or inquiries, feel free to contact us:</p>
+                    <ul>
+                        <li style="color: #fff">Email: <span style="color: teal;">AIATAT@gmail.com</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="end">
+            <p>Copyright © 2024 ALL-INDIA ADVENTURES TOUR AND TRAVELS Travels All Rights Reserved.<br></p>
+        </div>
+    </section>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="/Scripts/Routes/Submission.js">
+
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

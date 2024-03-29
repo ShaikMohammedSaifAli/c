@@ -1,0 +1,266 @@
+nav {
+    background-color: green;
+    box-shadow: 0 9px 5px #333;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.navbar {
+    background-color: black;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar li,
+a {
+    margin-right: 20px;
+    color: #fff;
+}
+
+.nav-link {
+    color: #fff;
+
+}
+
+.navbar-nav .nav-link {
+    font-size: 18px;
+    color: #fff;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footlinks {
+    flex: 1;
+}
+
+.footlinks h4 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.footlinks ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #333;
+}
+
+.footlinks ul li {
+    margin-bottom: 10px;
+    text-align: center;
+    color: #191919;
+}
+
+.footlinks a {
+    color: #fff;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+}
+
+.social a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.social a i {
+    font-size: 24px;
+}
+
+.end {
+    margin-top: 20px;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.image-container {
+    margin-bottom: 20px;
+}
+
+.btn-container {
+    margin-top: 20px;
+}
+
+.btn-container a {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn-container a:hover {
+    background-color: #45a049;
+}
+
+@media only screen and (max-width: 1024px) {
+    .title h1 {
+        font-size: 40px;
+        text-align: center;
+        margin-right: 0px;
+        display: block;
+
+    }
+
+    .navbar-brand {
+        position: absolute;
+        left: 0;
+        margin-left: 5px;
+    }
+
+    .navbar-toggler {
+        margin-left: 30%;
+        background-color: #fff;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .navbar-nav {
+        margin-left: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .container {
+        padding: 10px;
+    }
+
+    .btn-container a {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+@keyframes highlight {
+    0% {
+        color: red;
+    }
+
+    50% {
+        color: white;
+    }
+
+    100% {
+        color: red;
+    }
+}
+
+@keyframes highlights {
+    0% {
+        color: #45a049;
+    }
+
+    50% {
+        color: white;
+    }
+
+    100% {
+        color: #45a049;
+    }
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fc0050;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    animation: pulse 1.5s infinite;
+
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.nav-link {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background-color 1s ease;
+}
+
+.nav-link:hover {
+    background-color: #404040
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    background-color: transparent;
+    border-radius: 25px;
+    z-index: -1;
+    transition: background-color 1s ease;
+}
+
+.nav-link:hover::before {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.round-button {
+    border: none;
+    background-color: transparent;
+}
+.navbar-toggler {
+    background-color: #fff;
+}
+.round-button:hover .nav-link {
+    background-color: #333;
+    color: #fff;
+}

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOK NOW</title>
+    <link rel="icon" href="/Files/Routes/Logos/Logo Tab.png">
+    <link rel="stylesheet" type="text/css" href="CSS/styl.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: black;
+        color: #fff;
+        font-size: large;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    nav {
+        background-color: green;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        width: 100px;
+        height: auto;
+    }
+
+    .navbar {
+        background-color: #fc0050;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar li,
+    a {
+        margin-right: 20px;
+        color: #fff;
+    }
+
+    .nav-link {
+        color: #fff;
+
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 18px;
+        color: #fff;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 100px;
+        box-sizing: border-box;
+        background-color: #191919;
+        color: #fff;
+        padding: 17px;
+        font-size: 20px;
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        padding: 1px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #fff;
+    }
+
+    .footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .footlinks {
+        flex: 1;
+    }
+
+    .footlinks h4 {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .footlinks ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        color: #333;
+    }
+
+    .footlinks ul li {
+        margin-bottom: 10px;
+        text-align: center;
+        color: #191919;
+    }
+
+    .footlinks a {
+        color: #fff;
+    }
+
+    .social {
+        display: flex;
+        justify-content: center;
+    }
+
+    .social a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 5px;
+    }
+
+    .social a i {
+        font-size: 24px;
+    }
+
+    .end {
+        margin-top: 20px;
+    }
+
+    @media only screen and (max-width: 1024px) {
+        .title h1 {
+            font-size: 40px;
+        }
+
+        .navbar-brand {
+            position: absolute;
+            left: 0;
+            margin-left: 5px;
+        }
+
+        .navbar-toggler {
+            margin-left: 30%;
+            background-color: #fff;
+            color: #0000ff;
+        }
+    }
+
+    @media only screen and (min-width: 1025px) {
+        .navbar-nav {
+            margin-left: auto;
+        }
+    }
+
+    .nav-link {
+        position: relative;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        transition: background-color 1s ease;
+    }
+
+    .nav-link:hover {
+        background-color: #404040
+    }
+
+    .nav-link::before {
+        content: '';
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        width: calc(100% + 10px);
+        height: calc(100% + 10px);
+        background-color: transparent;
+        border-radius: 25px;
+        z-index: -1;
+        transition: background-color 1s ease;
+    }
+
+    .nav-link:hover::before {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+</style>
+
+<body class="register-body">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: black; padding: 20px; ">
+        <a href="/Routes/HomePage.html"><img src="/Files/Routes/Logos/Logo.png" class="logo" alt="Logo" title="FirstFlight Travels"></a>
+        <div class="order-lg-2 order-md-3">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse order-lg-3 order-md-2" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/Routes/HomePage.html" style="color: #fff;">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Routes/HomePage.html#locations" style="color: #fff;">LOCATIONS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Routes/Register.html" style="color: #fc0050;">BOOK NOW</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Routes/BookingDetails.html" style="color: #fc0050;">BOOKING VERIFICATION</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <br>
+   
+    <section class="footer">
+        <div class="foot">
+            <div class="footer-content">
+
+                <div class="footlinks">
+                    <h4 style="color: #097969;">Quick Links</h4>
+                    <ul>
+                        <li style="color: #800080;"><a href="/Routes/Register.html">Register</a></li>
+                        <li style="color: #000000;"><a href="/Routes/BookingDetails.html">Track Your Booking</a></li>
+                        <li style="color: #000000;"><a href="/Routes/Register.html">Book Now</a></li>
+                        <li><a href="/contact">Contact Form</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="footlinks">
+                    <h4 style="color: #097969;">Contact Us</h4>
+                    <p>If you have any questions or inquiries, feel free to contact us:</p>
+                    <ul>
+                        <li style="color: #fff">Email: <span style="color: teal;">AIAtourandtravels@gmail.com</span></li>
+                        <li style="color: #fff;">Phone: <span style="color: teal;">+91 9392773547</li></span></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="end">
+            <p>Copyright © 2022 Firstflight Travels All Rights Reserved.<br></p>
+        </div>
+    </section>
+    <script src="responsive.js"></script>
+</body>
+
+</html>
+

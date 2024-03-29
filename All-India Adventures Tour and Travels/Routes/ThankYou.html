@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THANK YOU FOR YOUR BOOKING</title>
+    <link rel="icon" href="/Files/Routes/Logos/Logo Tab.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" type="text/css" href="/Styles/Routes/ThankYou.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: black;
+            color: #333;
+        }
+
+        @keyframes glows {
+            from {
+                text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red;
+            }
+
+            to {
+                text-shadow: 0 0 20px blue, 0 0 30px #00f, 0 0 40px #00f;
+            }
+        }
+
+        .navbar-toggler {
+            background-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: black; padding: 20px; ">
+        <a href="/Routes/HomePage.html"><img src="/Files/Routes/Logos/Logo.png" class="logo" alt="Logo" title="FirstFlight Travels"></a>
+        <div class="order-lg-2 order-md-3">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse order-lg-3 order-md-2" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/Routes/HomePage.html" style="color: #fff;">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Routes/Destinations.html" style="color: #fff;">DESTINATIONS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Routes/ContactUs.html" style="color: #fff;">CONTACT US</a>
+                </li>
+                <li class="nav-item">
+                    <button class="round-button" style="background-color: transparent; border: none; padding: 0;">
+                        <a class="nav-link" href="/Routes/Register.html" style="color: #fff; animation: glows 1.5s infinite;">BOOK NOW</a>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="image-container">
+            <img src="/Files/Routes/Logos/Thank You.jpg" alt="Thank You Image" width="200">
+        </div>
+        <h1 style="color: #fff; font-size: 48px;">Thank You for <span style="color: #fc0050; animation: highlight 1s infinite;">BOOKING</span></h1>
+        <p style="color: #fff; font-size: 24px;">Your Booking has been successfully completed.</p>
+        <p style="color: #fff; font-size: 24px;">We appreciate your interest in our travel packages.</p>
+        <p style="color: #fff;font-size: 24px;">An <span style="color: #45a049; font-size: 30px; animation: highlights 1s infinite;">Confirmation</span> Email Is Send To Your Email ID</p>
+        <p style="color: #fff;font-size: 24px;">Pay The Amount of your  <span style="color: #fc0050; animation: highlight 1s infinite;">PACKAGE</span> By Clicking The BELOW Button</p>
+        <div class="btn-container">
+            <a href="#" class="btn" onclick="redirect()">PAY NOW</a>
+        </div>
+    </div>
+    <!-- Footer -->
+    <section class="footer">
+        <div class="foot">
+            <div class="footer-content">
+                <div class="footlinks">
+                    <h4 style="color: #097969;">Quick Links</h4>
+                    <ul>
+                        <li style="color: #800080;"><a href="/Routes/Register.html">Register</a></li>
+                        <li style="color: #000000;"><a href="/Routes/BookingDetails.html">Track Your Booking</a></li>
+                        <li style="color: #000000;"><a href="/Routes/Register.html">Book Now</a></li>
+                        <li><a href="/contact">Contact Form</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="footlinks">
+                    <h4 style="color: #097969;">Contact Us</h4>
+                    <p>If you have any questions or inquiries, feel free to contact us:</p>
+                    <ul>
+                        <li style="color: #fff">Email: <span style="color: teal;">AIATAT@gmail.com</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="end">
+            <p>Copyright © 2024 ALL-INDIA ADVENTURES TOUR AND TRAVELS Travels All Rights Reserved.<br></p>
+        </div>
+    </section>
+    <script>
+        function redirect() {
+    
+            alert("Click on OK to Redirect you to the Payments Page...");
+    
+            window.location.href = "https://rzp.io/l/kHOq7bncia";
+        }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

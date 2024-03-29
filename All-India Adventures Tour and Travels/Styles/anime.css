@@ -1,0 +1,301 @@
+@keyframes highlight {
+    0% { color: red; }
+    50% { color: white; }
+    100% { color: red; }
+    }/*style="animation: highlight 1s infinite;"*/
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.3); }
+        100% { transform: scale(1); }
+    }
+    @keyframes slideInFromLeft {
+        0% {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: red;
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        border-radius: 5px;
+        animation: pulse 2s infinite;
+    }
+    /*
+    .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 5px;
+    animation: pulse 2s infinite;
+}
+    
+    .nav-link {
+        position: relative;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px; 
+        border-radius: 20px; 
+        transition: background-color 1s ease; 
+    }
+    
+    .nav-link:hover {
+        background-color: #404040 
+    }
+    
+    .nav-link::before {
+        content: '';
+        position: absolute;
+        top: -5px; 
+        left: -5px; 
+        width: calc(100% + 10px);
+        height: calc(100% + 10px);
+        background-color: transparent;
+        border-radius: 25px; 
+        z-index: -1;
+        transition: background-color 1s ease; 
+    }
+    
+    .nav-link:hover::before {
+        background-color: rgba(255, 255, 255, 0.1); 
+    }
+    .round-button {
+        border: none;
+        background-color: transparent;
+    }
+    
+    .round-button:hover .nav-link {
+        background-color: #333;
+        color: #fff;
+    }
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Text Animations</title>
+<style>
+  /* Fade-In Animation */
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+  }
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
+  
+  /* Slide-In Animation */
+  .slide-in {
+    transform: translateX(-100%);
+    animation: slideIn 1s forwards;
+  }
+  @keyframes slideIn {
+    to { transform: translateX(0); }
+  }
+  
+  /* Typewriter Animation */
+  .typewriter {
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    animation: typing 2s steps(40) infinite alternate;
+  }
+  @keyframes typing {
+    from { width: 0; }
+  }
+  
+  /* Glow Animation */
+  .glow {
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+    animation: glow 1.5s ease-in-out infinite alternate;
+  }
+  @keyframes glow {
+    from { text-shadow: 0 0 10px #00f, 0 0 20px #00f, 0 0 30px #00f; }
+    to { text-shadow: 0 0 20px #00f, 0 0 30px #00f, 0 0 40px #00f; }
+  }
+  
+  /* Rotate Animation */
+  .rotate {
+    animation: rotate 2s linear infinite;
+  }
+  @keyframes rotate {
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Bounce Animation */
+  .bounce {
+    animation: bounce 1s infinite;
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  /* Pulse Animation */
+  .pulse {
+    animation: pulse 1s infinite;
+  }
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  
+  /* Color Cycle Animation */
+  .color-cycle {
+    animation: colorCycle 5s infinite;
+  }
+  @keyframes colorCycle {
+    0% { color: red; }
+    25% { color: blue; }
+    50% { color: green; }
+    75% { color: orange; }
+    100% { color: purple; }
+  }
+  
+  /* Shake Animation */
+  .shake {
+    animation: shake 0.5s infinite;
+  }
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(5px); }
+    50% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+  }
+  
+  /* Flash Animation */
+  .flash {
+    animation: flash 1s infinite;
+  }
+  @keyframes flash {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+  }
+  
+  /* Fade-Out Animation */
+  .fade-out {
+    animation: fadeOut 1s forwards;
+  }
+  @keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+  
+  /* Pop-Up Animation */
+  .pop-up {
+    transform: scale(0);
+    animation: popUp 0.5s forwards;
+  }
+  @keyframes popUp {
+    to { transform: scale(1); }
+  }
+  
+  /* Zoom-In Animation */
+  .zoom-in {
+    animation: zoomIn 1s forwards;
+  }
+  @keyframes zoomIn {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+  }
+  
+  /* Zoom-Out Animation */
+  .zoom-out {
+    animation: zoomOut 1s forwards;
+  }
+  @keyframes zoomOut {
+    from { transform: scale(1); }
+    to { transform: scale(0); }
+  }
+  
+  /* Spin Animation */
+  .spin {
+    animation: spin 2s linear infinite;
+  }
+  @keyframes spin {
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Scale-Up Animation */
+  .scale-up {
+    animation: scaleUp 1s forwards;
+  }
+  @keyframes scaleUp {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+  }
+  
+  /* Slide-Down Animation */
+  .slide-down {
+    animation: slideDown 1s forwards;
+  }
+  @keyframes slideDown {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+  }
+  
+  /* Flip Animation */
+  .flip {
+    animation: flip 2s forwards;
+  }
+  @keyframes flip {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+  }
+  
+  /* Slide-Up Animation */
+  .slide-up {
+    animation: slideUp 1s forwards;
+  }
+  @keyframes slideUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+  }
+  
+  /* Blink Animation */
+  .blink {
+    animation: blink 1s infinite;
+  }
+  @keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+/*</head>
+<body>
+  <h1 class="fade-in">Fade In Text</h1>
+  <h1 class="slide-in">Slide In Text</h1>
+  <h1 class="typewriter">Typewriter Effect</h1>
+  <h1 class="glow">Glowing Text</h1>
+  <h1 class="rotate">Rotating Text</h1>
+  <h1 class="bounce">Bouncing Text</h1>
+  <h1 class="pulse">Pulsating Text</h1>
+  <h1 class="color-cycle">Color Cycling Text</h1>
+  <h1 class="shake">Shaking Text</h1>
+  <h1 class="flash">Flashing Text</h1>
+  <h1 class="fade-out">Fade Out Text</h1>
+  <h1 class="pop-up">Pop Up Text</h1>
+  <h1 class="zoom-in">Zoom In Text</h1>
+  <h1 class="zoom-out">Zoom Out Text</h1>
+  <h1 class="spin">Spinning Text</h1>
+  <h1 class="scale-up">Scale Up Text</h1>
+  <h1 class="slide-down">Slide Down Text</h1>
+  <h1 class="flip">Flip Text</h1>
+  <h1 class="slide-up">Slide Up Text</h1>
+  <h1 class="blink">Blinking Text</h1>
+</body>
+</html>
